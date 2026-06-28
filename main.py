@@ -71,7 +71,7 @@ def create_pdf():
     
     # 4. Save as a single PDF at the root level
     pdf_filename = f"compiled_screenshots_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf"
-    image_list[0].save(pdf_filename, save_all=True, append_images=image_list[1:])
+    image_list[0].save(pdf_filename, save_all=True, format="PDF", append_images=image_list[1:])
     print(f"\nSUCCESS: PDF created as './{pdf_filename}'")
     
     # 5. Clean up temporary images
